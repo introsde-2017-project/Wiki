@@ -6,7 +6,10 @@ The general idea of my project is a user  comes on my app, gets registered and t
 
 ![alt text](https://github.com/introsde-2017-project/Wiki/blob/master/Diagram1.png)
 
-### Food Resource
+### Food Resource  
+# Implementation    
+ When a user chooses a food item he is able to evaluate the item as well so he makes his rating about the item through the function     
+ `addFoodRatings()`. this user is then added to the local database and also to the recombee database .after the item got selected the     recombee server recommends a few items to the user on the basis of his selection.the user can even see all the ratings given to the     specific item in past through the function `getfoodRatings()`. The overall scenario is given in the following diagrame.   
 ![alt text](https://github.com/introsde-2017-project/documentation/blob/master/Food_Resource.png)
 
 ### User Resource
