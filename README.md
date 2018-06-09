@@ -12,5 +12,7 @@ The general idea of my project is a user  comes on my app, gets registered and t
  `addFoodRatings()`. this user is then added to the local database and also to the recombee database .after the item got selected the     recombee server recommends a few items to the user on the basis of his selection.the user can even see all the ratings given to the     specific item in past through the function `getfoodRatings()`. The overall scenario is given in the following diagrame.   
 ![alt text](https://github.com/introsde-2017-project/documentation/blob/master/Food_Resource.png)
 
-### User Resource
+### User Resource  
+# Implementation    
+ This is the front end, where user has to do registration to my app. he inserts his name and all other informations and gets registered.   after the registration the user can login to the app and uses all the services my app offers. only authectic and registered users can   use the app.    
 ![alt text](https://github.com/introsde-2017-project/documentation/blob/master/User_Resource.png)
