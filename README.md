@@ -14,5 +14,5 @@ The general idea of my project is a user  comes on my app, gets registered and t
 
 ### User Resource  
 # Implementation    
- This is the front end, where user has to do registration to my app. he inserts his name and all other informations and gets registered.   after the registration the user can login to the app and uses all the services my app offers. only authectic and registered users can   use the app. The overall Implementation and scenario is given in the diagram.     
+ This is the front end, where user has to do registration to my app. he inserts his name and all other informations and gets registered.   after the registration the user can login to the app and uses all the services my app offers. only authentic and registered users can   use the app. The overall Implementation and scenario is given in the diagram.     
 ![alt text](https://github.com/introsde-2017-project/documentation/blob/master/User_Resource.png)
