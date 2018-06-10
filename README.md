@@ -8,6 +8,7 @@ NAME: Jan Main muhammad Faheem
 EMAIL: main.jan@unitn.it 
 
 app URL: https://knowyourcity123.herokuapp.com/  
+GitHub Ripo: https://github.com/introsde-2017-project/KnowYourCity-App  
 
 ## introduction:  
 `KnowYourCity` is an app which is used to suggest different food and movie recommendations to registered users based on there preferences, for recommendations a remote `Recombee` API is used, where we used two different Databases one for Food and another one for Movies In order to save the personal data of a user local `sqlite` DataBase is used. For the Quotes, a Remote Rest API is used which gives a random Quote with author name, each time its called.  
@@ -31,7 +32,8 @@ As you can see in the diagram below project is consist of different layers, and 
 ![alt text](https://github.com/introsde-2017-project/Wiki/blob/master/Diagram1.png)  
 
 ### Food Process Centric Layer  
-API Documantation: https://documenter.getpostman.com/view/2954866/RWEcNfPB   
+API Documantation: https://documenter.getpostman.com/view/2954866/RWEcNfPB  
+GitHub Ripo: https://github.com/introsde-2017-project/FoodProcessCentric  
 
 This layers is responsible for handling all the request coming from front-end user interface and process/redirect the requests accordingly to lower layers, all the required authentication are handled in this layer for each individual user.  
 Each time a user login it gets a unique Bearer token which he has to use for all the further requests in the future.  
@@ -42,12 +44,14 @@ Here is a list of services availabe for Api consumer:
 ![alt text](https://github.com/introsde-2017-project/documentation/blob/master/User_Resource.png)  
 
 ### Movie Process Centric Layer
-API Documantation: https://documenter.getpostman.com/view/2954866/RWEcNfmF    
+API Documantation: https://documenter.getpostman.com/view/2954866/RWEcNfmF 
+GitHub Ripo: https://github.com/introsde-2017-project/MovieProcessCentric  
 
 Movie process-centric layer is based on Rest Service which consumes SOAP business service layer and handle all the request related to recombee movie DB, again it checks for authentication for each request. you can check all the Services available in the API documentation.    
 
 ### Business Service Layer
-API Documantation: https://documenter.getpostman.com/view/2954866/RWEcNfmG    
+API Documantation: https://documenter.getpostman.com/view/2954866/RWEcNfmG 
+GitHub Ripo: https://github.com/introsde-2017-project/BusinessLogicService  
 
 based on SOAP Service also consumes soap service from a lower layer, handle all the business logic like converting the rating from [-1,1] to [0,5] range and initializing the recombee Database consuming the data from json file.    
 
@@ -68,14 +72,14 @@ here is the list of important services available for the service consumer.
    
    
 ### Storage Service Layer  
-API Documantation: https://documenter.getpostman.com/view/2954866/RWEcNfmJ   
-readMe: https://github.com/introsde-2017-project/StorageService#introsde-2017-project-storageservice  
+API Documantation: https://documenter.getpostman.com/view/2954866/RWEcNfmJ  
+GitHub Ripo: https://github.com/introsde-2017-project/StorageService  
 
 consumes and produce Soap services, takes request from the upper layer in our case business layer and redirect them to locate DataBase or recombee layer accordingly, for example saving a new user, have to save to both layers. for further detail please refer to API Documentation.    
 
 ### Local DataBase Layer  
-API Documantation: https://documenter.getpostman.com/view/2954866/RWEcNfqZ   
-ReadMe: https://github.com/introsde-2017-project/LocalDataService#introsde-2017-project-localdataservice  
+API Documantation: https://documenter.getpostman.com/view/2954866/RWEcNfqZ  
+GitHub Ripo: https://github.com/introsde-2017-project/LocalDataService  
 
 Consumes and Produce Soap services, Uses Sqlite database and JPA in order to do all the CRUD operations, or getting all the movie gen and movie types in the DataBase.   
 here is the list of services availabe to consumer:  
@@ -89,8 +93,8 @@ here is the list of services availabe to consumer:
 * `getMovieGens()` this method returns Movie genere.   
 
 ### Recombee Adopter Layer
-API Documantation: https://documenter.getpostman.com/view/2954866/RWEawhtg 
-ReadMe: https://github.com/introsde-2017-project/RecombeeAdapterService#recombee-adopter-layer  
+API Documantation: https://documenter.getpostman.com/view/2954866/RWEawhtg  
+Git ripo:  https://github.com/introsde-2017-project/RecombeeAdapterService  
 
 This is an adopter layer for the `knowYourCity` app which uses remote recombee Api for data storage and to get the recombee base recomondations accourding to to given user's pereferences.  
 Its is designed for two differnt type of DataBases in our case it is designed for food and movie DB, but all the mehthods are reusable and can easily be extended just by adding a new attribute in anum class `RecombeeDBType.java` and saving the DB credentials in the `RecombeeImpl.java` constructor.  
