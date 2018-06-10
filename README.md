@@ -3,7 +3,7 @@
 NAME: Cheema Danish Asghar  
 EMAIL: danishasghar.cheema@studenti.unitn.it  
 
-Group Partner by:  
+Group Partner:  
 NAME: Jan Main muhammad Faheem  
 EMAIL: main.jan@unitn.it 
 
