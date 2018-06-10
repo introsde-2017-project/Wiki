@@ -40,7 +40,4 @@ Here is a list of services availabe for Api consumer:
 #### User Resource         
 ![alt text](https://github.com/introsde-2017-project/documentation/blob/master/User_Resource.png)
 
-#### Food Resource    
-![alt text](https://github.com/introsde-2017-project/documentation/blob/master/Food_Resource.png)
-
 
