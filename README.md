@@ -1,18 +1,46 @@
-## Description.   
-# Basic idea.    
-The general idea of my project is a user  comes on my app, gets registered and then he/she select from movie and from food and hit     enter.these are the services which are my business services and these services are declared in business interface and implemented by      a class and made  it accessable through soap service.     
-# Implementation  
- There is the user interface which has a form ,the user comes fill the form for the registration in order to be able to select items my   app offering. he then chose items i.e he choses food and movie. these are the soap services which are granted through the business   layer.  the business layer then communicate with the local database. and on the base of the selection the recombee server then recommend items   to the user. as given in the diagram.  
+# Introsde-project-2017.   
 
+NAME: Cheema Danish Asghar  
+EMAIL: danishasghar.cheema@studenti.unitn.it  
+
+Group Partner by:  
+NAME: Jan Main muhammad Faheem  
+EMAIL: main.jan@unitn.it 
+
+app URL: https://knowyourcity123.herokuapp.com/  
+
+## introduction:  
+`KnowYourCity` is an app which is used to suggest different food and movie recommendations to registered users based on there preferences, for recommendations a remote `Recombee` API is used, where we used two different Databases one for Food and another one for Movies In order to save the personal data of a user local `sqlite` DataBase is used. For the Quotes, a Remote Rest API is used which gives a random Quote with author name, each time its called.  
+ 
+
+## FrontEnd Structure:  
+1) A new User can easily Register and use all the services in the app, for registration a user select type of movie and food to select the preferences. username and at least 3 digit password are mandatory, rest of the field is optional.  
+2) After successful signup user can login, the home page is consist of 4 tabs as follows.  
+
+| Search | Recommandation | My Ratings | Analysis |
+|--------|----------------|------------|----------|
+3) In search tab, a user can select food/movie type and get all the Items save in the DB.  
+4) Recommendation tab is used to get Recommendation for a user based on preferences.  
+5) My Ratings show all the rating added by a user.  
+6) The analysis tab shows all the items with the average rating given by different users.  
+7) Detail shows the user preferences and other details.  
+8) with each refresh a new random quote is displayed on the top of the page.  
+
+## Implementation and Project Structure
+As you can see in the diagram below project is consist of different layers, and multiple Rest And Soap based services. 
 ![alt text](https://github.com/introsde-2017-project/Wiki/blob/master/Diagram1.png)
 
-### Food Resource  
-# Implementation    
- When a user chooses a food item he is able to evaluate the item as well so he makes his rating about the item through the function     
- `addFoodRatings()`. this user is then added to the local database and also to the recombee database .after the item got selected the     recombee server recommends a few items to the user on the basis of his selection.the user can even see all the ratings given to the     specific item in past through the function `getfoodRatings()`. The overall scenario is given in the following diagrame.   
+### Food Process Centric Layer
+API Documantation: 
+
+This layers is responsible for handling all the request coming from front-end user interface and process/redirect the requests accordingly to lower layers, all the required authentication are handled in this layer for each individual user.
+Each time a user login it gets a unique Bearer token which he has to use for all the further requests in the future.
+
+Here is a list of services availabe for Api consumer:
+#### User Resource         
+![alt text](https://github.com/introsde-2017-project/documentation/blob/master/User_Resource.png)
+
+#### Food Resource    
 ![alt text](https://github.com/introsde-2017-project/documentation/blob/master/Food_Resource.png)
 
-### User Resource  
-# Implementation    
- This is the front end, where user has to do registration to my app. he inserts his name and all other informations and gets registered.   after the registration the user can login to the app and uses all the services my app offers. only authentic and registered users can   use the app. The overall Implementation and scenario is given in the diagram.     
-![alt text](https://github.com/introsde-2017-project/documentation/blob/master/User_Resource.png)
+
